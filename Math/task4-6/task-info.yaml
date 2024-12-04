@@ -1,0 +1,11 @@
+type: edu
+files:
+  - name: test/Tests.java
+    visible: false
+    propagatable: false
+  - name: src/Task.java
+    visible: true
+  - name: task.md
+    visible: true
+  - name: src/User.java
+    visible: false

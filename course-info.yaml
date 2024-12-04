@@ -1,0 +1,15 @@
+type: marketplace
+title: Java21StreamAPI
+language: Russian
+summary: Java 21 Stream API course
+vendor:
+  name: Alexey Nazarov
+programming_language: Java
+content:
+  - Output
+  - Math
+  - Sorting
+  - ToCollection
+  - Misc
+environment_settings:
+  jvm_language_level: JDK_21
