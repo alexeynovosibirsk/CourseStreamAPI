@@ -1,13 +1,12 @@
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Task {
     public static void main(String[] args) {
-        String s = userList.stream() //put your solution below:
-                .
-        System.out.println(s);
+        String s = userList.stream()
+                .map(User::getFirstName)
+                .collect(Collectors.joining(", "));
     }
 
     private static final List<User> userList = Arrays.asList(

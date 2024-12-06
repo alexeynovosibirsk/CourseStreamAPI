@@ -11,10 +11,9 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue(content.contains("filter("));
-            assertTrue(content.contains("getAge()"));
-            assertTrue(content.contains(">"));
-            assertTrue(content.contains("getFirstName().charAt(0)"));
+            assertTrue("Use: filter()", content.contains("filter"));
+            assertTrue("Use: getAge()", content.contains("getAge()"));
+            assertTrue("Use: getFirstName().charAt(0)", content.contains("getFirstName().charAt(0)"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

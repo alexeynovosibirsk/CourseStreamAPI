@@ -1,7 +1,7 @@
 type: marketplace
 title: Java21StreamAPI
 language: Russian
-summary: Java 21 Stream API course
+summary: This course is about Java Stream API. It consists 5 lessons with 21 tasks.
 vendor:
   name: Alexey Nazarov
 programming_language: Java

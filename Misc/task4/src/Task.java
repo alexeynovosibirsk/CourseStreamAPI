@@ -1,13 +1,11 @@
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class Task {
     public static void main(String[] args) {
         boolean isPresentUserWithFirstNameStartsFromA =
-        userList.stream() //put your solution below:
-                .
-        System.out.println(isPresentUserWithFirstNameStartsFromA);
+        userList.stream()
+                .anyMatch(u -> u.getFirstName().startsWith("A"));
     }
 
     private static final List<User> userList = Arrays.asList(

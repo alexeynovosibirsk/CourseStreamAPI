@@ -3,8 +3,9 @@ import java.util.List;
 
 public class Task {
     public static void main(String[] args) {
-        userList.stream() //put your solution below:
-                .
+        userList.stream()
+                .filter(u -> u.getAge() > 10)
+                .filter(u -> u.getFirstName().charAt(0) != 'A')
                 .forEach(System.out::println);
     }
 

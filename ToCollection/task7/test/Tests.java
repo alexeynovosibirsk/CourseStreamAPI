@@ -11,9 +11,12 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-                assertTrue(content.contains("collect(Collectors.groupingBy(User::getNationality))"));
-                assertTrue(content.contains("get(\"EN\")"));
-                assertTrue(content.contains("min(Comparator.comparing(User::getAge)"));
+                assertTrue("Use: collect(Collectors.groupingBy(User::getNationality))",
+                        content.contains("collect(Collectors.groupingBy(User::getNationality))"));
+                assertTrue("Use: get(\"EN\")",
+                        content.contains("get(\"EN\")"));
+                assertTrue("Use: min(Comparator.comparing(User::getAge)",
+                        content.contains("min(Comparator.comparing(User::getAge)"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

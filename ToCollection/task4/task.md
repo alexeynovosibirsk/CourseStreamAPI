@@ -1,11 +1,10 @@
 Вывести содержимое коллекции в консоль.
- 
-Подсказка:
+
 <div class="hint">
 entrySet()
 </div>
 
-Ответ:
+Варианты решений:
 <div class="hint">
 entrySet().stream().forEach(System.out::println)
 

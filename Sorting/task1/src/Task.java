@@ -1,11 +1,11 @@
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
 
 public class Task {
     public static void main(String[] args) {
-        userList.stream() //put your solution below:
-                .
+        userList.stream()
+                .sorted(Comparator.comparing(User::getAge));
     }
 
     private static final List<User> userList = Arrays.asList(

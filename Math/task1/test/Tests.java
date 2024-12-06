@@ -11,9 +11,10 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-                assertTrue(
-                        content.contains("collect(Collectors.averagingDouble(User::getAge))") ||
-                                content.contains(".summaryStatistics().getAverage()") || content.contains("average().getAsDouble()"));
+            assertTrue("Use: collect() or mapToDouble()",
+                    content.contains("collect(Collectors.averagingDouble(User::getAge))") ||
+                            content.contains(".summaryStatistics().getAverage()") ||
+                            content.contains("average().getAsDouble()"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

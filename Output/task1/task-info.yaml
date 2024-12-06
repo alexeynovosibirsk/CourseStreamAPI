@@ -2,6 +2,11 @@ type: edu
 files:
   - name: src/Task.java
     visible: true
+    placeholders:
+      - offset: 157
+        length: 29
+        placeholder_text: /*Ваше решение здесь */
+        is_visible: false
   - name: test/Tests.java
     visible: false
     propagatable: false

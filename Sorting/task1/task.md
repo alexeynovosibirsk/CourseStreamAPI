@@ -1,17 +1,16 @@
  Сортировка списка по одному полю:
- отсортировать по возрасту, в обратном порядке
- 
-Подсказка:
+ отсортировать по возрасту
+
 <div class="hint">
 sorted()
 </div>
 
-Ответ:
+Варианты решений:
 <div class="hint">
-sorted(Comparator.comparing(User::getAge).reversed()
+sorted(Comparator.comparing(User::getAge));
 
 или
 
-sorted((u1, u2) -> u2.getAge() - u1.getAge())
+sorted((u1, u2) -> u1.getAge() - u2.getAge())
 
 </div>

@@ -5,7 +5,7 @@
 collect()
 </div>
 
-Ответ:
+Варианты решений:
 <div class="hint">
 collect(Collectors.groupingBy(User::getNationality))
 

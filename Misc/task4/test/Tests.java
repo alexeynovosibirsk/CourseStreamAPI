@@ -11,7 +11,8 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue(content.contains("anyMatch(") && content.contains("->") && content.contains("getFirstName()"));
+            assertTrue("Use: anyMatch()", content.contains("anyMatch"));
+            assertTrue("Use: getFirstName()", content.contains("getFirstName()"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

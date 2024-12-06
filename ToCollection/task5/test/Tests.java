@@ -11,8 +11,8 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue(content.contains("groupingBy(User::getNationality)"));
-            assertTrue(content.contains("entrySet()") || content.contains("System.out.println"));
+            assertTrue("Use: groupingBy(User::getNationality)", content.contains("groupingBy(User::getNationality)"));
+            assertTrue("Use: forEach()", content.contains("forEach"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

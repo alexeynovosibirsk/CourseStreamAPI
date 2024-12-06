@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Task {
     public static void main(String[] args) {
-        List<Integer> integers = userList.stream() //put your solution below:
-                .
+        List<Integer> integers = userList.stream()
+                .map(User::getAge).toList();
     }
 
     private static final List<User> userList = Arrays.asList(

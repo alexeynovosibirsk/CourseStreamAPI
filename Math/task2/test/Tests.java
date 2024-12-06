@@ -11,13 +11,14 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue(content.contains("mapToInt(") && content.contains("->") && content.contains("getFirstName().length()"));
+            assertTrue("Use: mapToInt(u -> u.getFirstName().length())",
+                    content.contains("mapToInt(") && content.contains("->") && content.contains("getFirstName().length()"));
             boolean usedMax = content.contains("max()");
             if (usedMax) {
-                assertTrue(content.contains("getAsInt()"));
+                assertTrue("Use: getAsInt())", content.contains("getAsInt()"));
             } else {
-                assertTrue(content.contains("summaryStatistics()"));
-                assertTrue(content.contains("getMax()"));
+                assertTrue("Use: summaryStatistics())", content.contains("summaryStatistics()"));
+                assertTrue("Use: getMax())", content.contains("getMax()"));
             }
 
         } catch (IOException e) {

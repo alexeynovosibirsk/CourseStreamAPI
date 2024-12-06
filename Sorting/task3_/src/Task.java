@@ -3,9 +3,8 @@ import java.util.List;
 
 public class Task {
     public static void main(String[] args) {
-        long nationalities = userList.stream() //put your solution below:
+        userList.stream() //put your solution below:
                 .
-        System.out.println(nationalities);
     }
 
     private static final List<User> userList = Arrays.asList(
@@ -19,3 +18,5 @@ public class Task {
     );
 
 }
+
+

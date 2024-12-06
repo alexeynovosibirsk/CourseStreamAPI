@@ -11,10 +11,10 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue(content.contains("getFirstName()"));
-            assertTrue(content.contains("substring(0,"));
-            assertTrue(content.contains("3)"));
-            assertTrue(content.contains("forEach(System.out::println)"));
+            assertTrue("Use: getFirstName()", content.contains("getFirstName()"));
+            assertTrue("Use: substring(0,", content.contains("substring(0,"));
+            assertTrue("Use: 3", content.contains("3"));
+            assertTrue("Use: forEach(System.out::println)", content.contains("forEach(System.out::println)"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

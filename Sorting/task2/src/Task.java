@@ -4,9 +4,8 @@ import java.util.List;
 
 public class Task {
     public static void main(String[] args) {
-        userList.stream() //put your solution below:
-               .
-                .forEach(System.out::println);
+        userList.stream()
+                .sorted(Comparator.comparing(User::getAge).reversed());
     }
 
     private static final List<User> userList = Arrays.asList(
@@ -20,3 +19,5 @@ public class Task {
     );
 
 }
+
+

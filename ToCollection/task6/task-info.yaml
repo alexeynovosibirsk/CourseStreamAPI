@@ -5,7 +5,11 @@ files:
     propagatable: false
   - name: src/Task.java
     visible: true
+    placeholders:
+      - offset: 157
+        length: 8
+        placeholder_text: /* Ваше решение здесь */
   - name: task.md
-    visible: true
+    visible: false
   - name: src/User.java
     visible: false

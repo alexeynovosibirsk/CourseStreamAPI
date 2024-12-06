@@ -1,10 +1,12 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Task {
     public static void main(String[] args) {
-        userList.stream() //put your solution below:
-                .
+        userList.stream()
+                .collect(Collectors.groupingBy(User::getNationality))
+                .entrySet().stream().forEach(System.out::println);
     }
 
     private static final List<User> userList = Arrays.asList(

@@ -1,13 +1,11 @@
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class Task {
     public static void main(String[] args) {
         boolean isAllUsersOlderThenTenYearsOld =
-        userList.stream() //put your solution below:
-               .
-        System.out.println(isAllUsersOlderThenTenYearsOld);
+        userList.stream()
+               .allMatch(u -> u.getAge() > 10);
     }
 
     private static final List<User> userList = Arrays.asList(

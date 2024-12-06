@@ -1,11 +1,12 @@
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Task {
     public static void main(String[] args) {
-        Map<Long, User> map = userList.stream() //put your solution below:
-                .
+        Map<Long, User> map = userList.stream()
+                .collect(Collectors.toMap(User::getId, u -> u));
         System.out.println(map);
     }
 

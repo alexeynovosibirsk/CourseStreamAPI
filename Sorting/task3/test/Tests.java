@@ -7,19 +7,17 @@ import java.nio.file.Paths;
 import static org.junit.Assert.assertTrue;
 
 public class Tests {
-  @Test
-  public void testSolution() {
-      try {
-        String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-        boolean isLyambda = content.contains("->");
-        if (!isLyambda) {
-            assertTrue(content.contains("sorted(Comparator.comparing(User::getAge)"));
-        } else {
-            assertTrue(content.contains("getAge()"));
+    @Test
+    public void testSolution() {
+        try {
+            String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
+            assertTrue("Use: sorted(Comparator.comparing(User::getNationality)",
+                    content.contains("sorted(Comparator.comparing(User::getNationality)"));
+            assertTrue("Use: thenComparing(User::getFirstName)",
+                    content.contains("thenComparing(User::getFirstName)"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-      } catch (IOException e) {
-          throw new RuntimeException(e);
-      }
-  }
+    }
 
 }

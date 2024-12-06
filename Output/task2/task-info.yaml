@@ -1,11 +1,14 @@
 type: edu
 files:
+  - name: src/Task.java
+    visible: true
+    placeholders:
+      - offset: 157
+        length: 70
+        placeholder_text: /*Ваше решение здесь */
+        is_visible: false
+  - name: src/User.java
+    visible: false
   - name: test/Tests.java
     visible: false
     propagatable: false
-  - name: src/Task.java
-    visible: true
-  - name: task.md
-    visible: true
-  - name: src/User.java
-    visible: false

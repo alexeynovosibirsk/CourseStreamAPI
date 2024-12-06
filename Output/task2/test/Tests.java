@@ -11,8 +11,9 @@ public class Tests {
   public void testSolution() {
       try {
         String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-          assertTrue(content.contains(".forEach"));
-          assertTrue(content.contains("System.out.println(u.getFirstName()"));
+          assertTrue("Use: .forEach()",content.contains(".forEach"));
+          assertTrue("Use: System.out.println",content.contains("System.out.println"));
+          assertTrue("Use: u.getFirstName()",content.contains("getFirstName()"));
       } catch (IOException e) {
           throw new RuntimeException(e);
       }

@@ -11,9 +11,8 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue(content.contains("map(User::getNationality)"));
-            assertTrue(content.contains("distinct()"));
-            assertTrue(content.contains("count()"));
+                assertTrue("Use: mapToInt or map", content.contains("map"));
+                assertTrue("Use: max()", content.contains("max("));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

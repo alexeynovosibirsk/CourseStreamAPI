@@ -4,9 +4,9 @@ import java.util.stream.Collectors;
 
 public class Task {
     public static void main(String[] args) {
-        userList.stream() //put your solution below:
+        userList.stream()
                 .collect(Collectors.toMap(User::getId, u ->u))
-                        .
+                        .entrySet().stream().forEach(System.out::println);
     }
 
     private static final List<User> userList = Arrays.asList(

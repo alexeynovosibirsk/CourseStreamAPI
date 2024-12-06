@@ -2,13 +2,9 @@
  
 Подсказка:
 <div class="hint">
+<code>
 map()
+</code>
 </div>
 
-Ответ:
-<div class="hint">
-map(u -> u.getFirstName().substring(0, 3))
-
-forEach(System.out::println);
-</div>
                                         

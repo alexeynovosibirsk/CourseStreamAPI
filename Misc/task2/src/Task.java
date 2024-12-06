@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Task {
     public static void main(String[] args) {
-        userList.stream() //put your solution below:
-                .
+        userList.stream()
+                .map(u -> u.getFirstName().substring(0, 3)).forEach(System.out::println);
     }
 
     private static final List<User> userList = Arrays.asList(

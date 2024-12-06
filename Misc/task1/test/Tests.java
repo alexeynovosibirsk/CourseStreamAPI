@@ -11,14 +11,13 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            boolean isReduce = content.contains("reduce");
-            if(isReduce) {
+            if(content.contains("reduce")) {
                 assertTrue(content.contains("getAge()"));
             } else {
-                assertTrue(content.contains("max(Comparator.comparing"));
-                assertTrue(content.contains("User::getAge"));
+                assertTrue("Use: max(Comparator.comparing()", content.contains("max(Comparator.comparing"));
+                assertTrue("Use: User::getAge", content.contains("User::getAge"));
             }
-            assertTrue(content.contains("ifPresent(System.out::println)"));
+            assertTrue("Use: ifPresent(System.out::println)", content.contains("ifPresent(System.out::println)"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

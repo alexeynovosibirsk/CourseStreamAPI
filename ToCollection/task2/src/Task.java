@@ -1,11 +1,12 @@
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Task {
     public static void main(String[] args) {
         List<Integer> integers = userList.stream().map(User::getAge).toList();
-        integers.stream()//put your solution below:
-                .
+        integers.stream()
+                .filter(i -> Collections.frequency(integers, i) > 1).findFirst().ifPresent(System.out::println);
     }
 
     private static final List<User> userList = Arrays.asList(

@@ -11,7 +11,8 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue(content.contains("collect(Collectors.joining(\", \""));
+            assertTrue("Use: collect(Collectors.joining(\", \")",
+                    content.contains("collect(Collectors.joining(\", \""));
 
         } catch (IOException e) {
             throw new RuntimeException(e);

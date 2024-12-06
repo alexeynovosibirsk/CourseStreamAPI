@@ -11,7 +11,7 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue(content.contains("toList()"));
+            assertTrue("Use: toList()", content.contains("toList()"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

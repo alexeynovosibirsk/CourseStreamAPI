@@ -1,13 +1,13 @@
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Task {
     public static void main(String[] args) {
-        int maxFirstNameLength =
-        userList.stream() //put your solution below:
-               .
-        System.out.println(maxFirstNameLength);
+        double averageAge =
+                userList.stream()
+                        .collect(Collectors.averagingDouble(User::getAge));
+        System.out.println(averageAge);
     }
 
     private static final List<User> userList = Arrays.asList(

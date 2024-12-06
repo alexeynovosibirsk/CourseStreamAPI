@@ -1,17 +1,18 @@
 Вычислить самое длинное имя (firstName)
- 
-Подсказка:
+
 <div class="hint">
 mapToInt()
 </div>
 
-Ответ:
+Варианты решений:
 <div class="hint">
-  mapToInt(u -> u.getFirstName().length()).max().getAsInt();
+  mapToInt(u -> u.getFirstName().length())
+
+.max().getAsInt();
 
 Вариант II:
 
-mapToInt(u -> u.getFirstName().length()).summaryStatistics().getMax();
+.summaryStatistics().getMax();
 
 </div>
                                         

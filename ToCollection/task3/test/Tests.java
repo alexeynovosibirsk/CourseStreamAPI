@@ -11,7 +11,9 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue(content.contains("collect(Collectors.toMap(User::getId"));
+            assertTrue("Use: collect()", content.contains("collect("));
+            assertTrue("Use: Collectors.toMap()", content.contains("Collectors.toMap"));
+            assertTrue("Use: User::getId", content.contains("User::getId"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

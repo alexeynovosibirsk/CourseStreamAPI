@@ -11,9 +11,10 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-                assertTrue(content.contains("filter"));
-                assertTrue(content.contains("Collections.frequency"));
-                assertTrue(content.contains("findFirst()"));
+                assertTrue("Use: filter()", content.contains("filter"));
+                assertTrue("Use: Collections.frequency()", content.contains("Collections.frequency"));
+                assertTrue("Use: findFirst()", content.contains("findFirst()"));
+                assertTrue("ifPresent(System.out::println)", content.contains("ifPresent(System.out::println)"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

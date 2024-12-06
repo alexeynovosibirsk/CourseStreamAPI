@@ -11,14 +11,10 @@ public class Tests {
   public void testSolution() {
       try {
         String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-        boolean check = content.contains("Comparator.comparing(User::getAge)");
-        if (!check) {
-            assertTrue(content.contains("sorted(("));
-            assertTrue(content.contains("->"));
-            assertTrue(content.contains("getAge()"));
-        } else {
-            assertTrue(check);
-            assertTrue(content.contains("reversed()"));
+          assertTrue("Use: sorted()", content.contains("sorted("));
+          assertTrue("Use: getAge()", content.contains("getAge()"));
+        if (content.contains("sorted((")) {
+            assertTrue("Use: ->", content.contains("->"));
         }
       } catch (IOException e) {
           throw new RuntimeException(e);

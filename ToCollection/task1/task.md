@@ -1,13 +1,7 @@
-Создать список из чисел.
- 
-Подсказка:
+Создать список из чисел (использовать возраст пользователей User::getAge)
+
 <div class="hint">
 toList()
 </div>
 
-Ответ:
-<div class="hint">
-
-map(User::getAge).toList();
-</div>
                                         
