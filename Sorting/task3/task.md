@@ -5,10 +5,3 @@
 <div class="hint">
 sorted()
 </div>
-
-Ответ:
-<div class="hint">
-.sorted(Comparator.comparing(User::getNationality)
-.thenComparing(User::getFirstName));
-
-</div>

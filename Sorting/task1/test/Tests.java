@@ -12,7 +12,7 @@ public class Tests {
       try {
         String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
           assertTrue("Use: sorted()", content.contains("sorted("));
-          assertTrue("Use: getAge()", content.contains("getAge()"));
+          assertTrue("Use: getAge()", content.contains("getAge"));
         if (content.contains("sorted((")) {
             assertTrue("Use: ->", content.contains("->"));
         }

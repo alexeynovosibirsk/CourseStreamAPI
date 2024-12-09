@@ -11,7 +11,9 @@ anyMatch()
 <code>
 anyMatch(u -> u.getFirstName().startsWith("A"));
 </code>
+
 Вариант II:
+
 <code>
   anyMatch(u -> u.getFirstName().charAt(0) == 'A');
 </code>

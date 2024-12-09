@@ -15,7 +15,9 @@ ifPresent(System.out::println);
 или
 
 
-reduce((u1, u2) -> u1.getAge() > u2.getAge() ? u1 : u2);
+reduce((u1, u2) -> u1.getAge() > u2.getAge() ? u1 : u2)
+
+ifPresent(System.out::println);
 
 </div>
                                         
