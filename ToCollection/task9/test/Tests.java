@@ -11,10 +11,10 @@ public class Tests {
     public void testSolution() {
         try {
             String content = new String(Files.readAllBytes(Paths.get("src/Task.java")));
-            assertTrue("Use: filter()", content.contains("filter"));
-            assertTrue("Use: getAge()", content.contains("getAge()"));
-            assertTrue("Use: !u.getFirstName().startsWith(\"A\") or getFirstName().charAt(0)",
-                    content.contains("getFirstName().charAt(0)") || content.contains("!u.getFirstName().startsWith"));
+                assertTrue("Use: filter()", content.contains("filter"));
+                assertTrue("Use: Collections.frequency()", content.contains("Collections.frequency"));
+                assertTrue("Use: distinct()", content.contains("distinct()"));
+                assertTrue("forEach(System.out::println)", content.contains("forEach(System.out::println)"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
